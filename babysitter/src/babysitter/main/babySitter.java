@@ -70,13 +70,31 @@ public class babySitter {
         return pay;
     }
 
+    public static int totalPayForBabySitter(int start,int bed ,int end) {
+    	int totalPay =0;
+    	int pay = pay_from_Starttime_to_bedtime(start,bed,end);
+		int pay_1 = pay_from_badtime_to_midnight(start,bed,end);
+		int pay_2 = pay_from_midnight_to_endtime(start,bed,end);
+		totalPay = pay+pay_1+pay_2;
+		System.out.println("Total Pay for BabaySitter is  => $"+totalPay);
+		
+    	
+		return totalPay;
+    }
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        int total_pay = 0;
-		total_pay +=pay_from_Starttime_to_bedtime(5,8,4);
-        total_pay +=pay_from_badtime_to_midnight(5,8,4);
-        total_pay += pay_from_midnight_to_endtime(5,8,4);
-        
+        // int total_pay = 0;
+		// total_pay +=pay_from_Starttime_to_bedtime(5,8,4);
+        // total_pay +=pay_from_badtime_to_midnight(5,8,4);
+        // total_pay += pay_from_midnight_to_endtime(5,8,4);
+        System.out.println("Default TestCase");
+        totalPayForBabySitter(5,8,4); //default test case
+        System.out.println("TestCase #2");
+        totalPayForBabySitter(5,6,4); //bedtime is 1hour after start time 
+        System.out.println("TestCase #3");
+        totalPayForBabySitter(5,11,4); //bedtime is 1hour before midnight 
+
 
 	}
 
