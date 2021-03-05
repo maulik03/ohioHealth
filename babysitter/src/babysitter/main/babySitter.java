@@ -93,7 +93,10 @@ public class babySitter {
         System.out.println("TestCase #2");
         totalPayForBabySitter(5,6,4); //bedtime is 1hour after start time 
         System.out.println("TestCase #3");
-        totalPayForBabySitter(5,11,4); //bedtime is 1hour before midnight 
+        totalPayForBabySitter(5,11,4); //bedtime is 1hour before midnight
+        System.out.println("TestCase #4");
+        totalPayForBabySitter(10,11,1); //start time is 2 hour before midnight and bed time is 1 hour before midnight
+         
 
 
 	}

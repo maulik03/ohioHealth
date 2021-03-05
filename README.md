@@ -1,7 +1,10 @@
 # ohioHealth Assignment
 Author : Maulik Parikh
 # How to Run the program
-
+in order to run the program update or add the below method inside the main method
+```
+totalPayForBabySitter(startTime,bedTime,endTime);
+```
 # Babysitter Kata
 
 ## Background
