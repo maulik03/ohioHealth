@@ -52,10 +52,31 @@ public class babySitter {
         return pay;
     }
 
+    //below method is to calculate the pay from the midnight to end time
+    private static int pay_from_midnight_to_endtime (int start,int bed ,int end) {
+        int pay = 0;
+
+        if (end < MIDNIGHT) {
+            if (start <= MIDNIGHT) {
+                pay += (end)* payfrommidnighttoend;
+            } else {
+                pay += (end - MIDNIGHT) * payfrommidnighttoend;
+            }
+        }
+        else if (end == MIDNIGHT) {
+        	pay += (0) * payfrommidnighttoend;
+        }
+        System.out.println("This is the pay for midnight to end time => $ "+pay);
+        return pay;
+    }
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		pay_from_Starttime_to_bedtime(5,8,4);
-        pay_from_badtime_to_midnight(5,8,4);
+        int total_pay = 0;
+		total_pay +=pay_from_Starttime_to_bedtime(5,8,4);
+        total_pay +=pay_from_badtime_to_midnight(5,8,4);
+        total_pay += pay_from_midnight_to_endtime(5,8,4);
+        
 
 	}
 
